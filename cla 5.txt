@@ -1,0 +1,6 @@
+const calcAverageHumanAge = function (ageList) {
+    const filteredVals = ageList
+        .map(val => (val <= 2 ? 2 * val : 16 + val * 4))
+        .filter(val => val >= 18);
+    return filteredVals.reduce((acc, val) => acc + val) / filteredVals.length;
+};
